@@ -8,7 +8,7 @@ namespace EventsCallback
 {
     class Program
     {
-        // 75 Using a delegate
+        // 75 Using a delegate 
         static void Main(string[] args)
         {
             UseDelegate del = new UseDelegate();
