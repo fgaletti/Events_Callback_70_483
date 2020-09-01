@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventsCallback
 {
+    // 78_delegates_lambda
     public class UseDelegate
     {
         public delegate int Calculate(int x, int y);
@@ -15,20 +16,22 @@ namespace EventsCallback
             return x + y;
         }
 
-        public int Multiply(int x, int y)
-        {
-            return x * y;
-        }
-
         public UseDelegate()
         {
-            Calculate calc = Add; // pointing to Add
+            Calculate calc = (int x, int y) =>
+            {
+                Console.WriteLine("Adding numbers");
+                return x + y; // multiple lines must Use "return"
 
-            Console.WriteLine(calc(3, 4));
+                }
+            ;
+            Console.WriteLine(calc(5, 5));
 
-            calc = Multiply; // 
+            Calculate calc1 = (int x, int y) => x + y;
+            Console.WriteLine(calc1(5, 5));
 
-            Console.WriteLine(calc(3, 4));
+
+
         }
 
     }

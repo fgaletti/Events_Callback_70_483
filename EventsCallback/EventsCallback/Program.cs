@@ -8,12 +8,10 @@ namespace EventsCallback
 {
     class Program
     {
-        // 76 Multicast  
+        // 78 Use Delegate
         static void Main(string[] args)
         {
-            Multicast m = new Multicast();
-            m.Multicast2();
-
+            UseDelegate del = new UseDelegate();
         }
     }
 }
