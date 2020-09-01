@@ -8,10 +8,17 @@ namespace EventsCallback
 {
     class Program
     {
-        // 78 Use Delegate
+        // 80 events
         static void Main(string[] args)
         {
-            UseDelegate del = new UseDelegate();
+            Car c = new Car();
+            c.OnChange += C_OnChange;
+            c.Speed = 65;
+        }
+
+        private static void C_OnChange()
+        {
+            Console.WriteLine(" C_OnChange");
         }
     }
 }
