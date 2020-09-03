@@ -18,7 +18,7 @@ namespace EventsCallback
 
         private static void C_OnChange()
         {
-            Console.WriteLine(" C_OnChange");
+            Console.WriteLine(" Event fired : car is > 60");
         }
     }
 }
